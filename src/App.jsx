@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router'
 import DefaultLayout from './components/layout/DefaultLayout'
 import HomePage from './pages/HomePage'
 import MoviePage from './pages/MoviePage'
+import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
 
@@ -13,7 +14,8 @@ function App() {
         <Routes>
           <Route element={<DefaultLayout />}>
             <Route index element={<HomePage />} />
-            <Route path='/details/:id' element={<MoviePage />} />
+            <Route path='/movies/:id' element={<MoviePage />} />
+            <Route path='*' element={<NotFoundPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

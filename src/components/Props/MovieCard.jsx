@@ -1,7 +1,7 @@
-import { Link } from "react-router"
+import { Link } from "react-router-dom"
 
-const MovieCard = (movieProps) => {
-    const { id, title, director, genre, release_year, abstract, image } = { movieProps };
+const MovieCard = ({ movieProp }) => {
+    const { id, title, director, genre, release_year, abstract, image } = movieProp;
     return (
         <>
             <h2>Card Movie</h2>
@@ -15,7 +15,7 @@ const MovieCard = (movieProps) => {
                     <li>{title}</li>
                 </ul>
             </div>
-            <Link to={`/details/${id}`}></Link >
+            <Link to={`/movies/${id}`}>More</Link >
         </>
     )
 }

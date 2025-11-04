@@ -1,9 +1,18 @@
-const MovieDetails = () => {
+const MovieDetails = ({ reviewProp }) => {
+    // Destrutturazione
+    const { name, vote, text } = reviewProp;
 
     return (
         <>
-            <h2>Details Movie</h2>
-
+            <div>
+                <div>
+                    <p>
+                        {text}
+                    </p>
+                    <strong>Vote: {vote}</strong>
+                    <address><i>By {name}</i></address>
+                </div>
+            </div>
         </>
     )
 }

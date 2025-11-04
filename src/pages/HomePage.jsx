@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios";
 
-import MovieCard from "../components/Main/MovieCard"
+import MovieCard from "../components/Props/MovieCard"
 
 const HomePage = () => {
 
@@ -15,7 +15,6 @@ const HomePage = () => {
             .catch(error => {
                 console.log(error);
             })
-
     };
 
     // prima chiamata e montaggio 
