@@ -35,3 +35,18 @@ In ultimo, effettuiamo una chiamata AJAX dalla pagina di dettaglio per ottenere 
 Bonus
 Curare l’aspetto estetico della vostra applicazione;
 se il resto è a dri poco perfetto e tutto compreso potrei aggiungere magari qualche features come fatto questa mattina (es. 404 e media voti)
+
+##Esercizio parte 3
+Parte 2
+Miglioriamo l’esperienza dell’utente inserendo 
+
+##MILESTONE 1 (BACKEND)
+
+Predisponiamo un’API per salvare nel database una nuova recensione legata ad un film
+Testiamola su postman e verifichiamo che nel DB venga effettivamente inserita una nuova recensione
+
+##MILESTONE 2 (FRONTEND)
+
+Creiamo un componente che contenga il form per le recensioni
+Inseriamo questo componente nella pagina di dettaglio del film
+All’invio del form, la nuova recensione viene salvata sul database e visualizzata nella pagina, in fondo alle altre

@@ -2,6 +2,7 @@ import { Link, useNavigate, useParams } from "react-router"
 import MovieDetails from "../components/Props/MovieDetails"
 import axios from "axios"
 import { useState, useEffect } from "react";
+import ReviewForm from "../components/Props/ReviewForm";
 
 const MoviePage = () => {
     // Istance di navigate
@@ -38,6 +39,7 @@ const MoviePage = () => {
             <div>
                 <img src={moviesPage?.image} alt={moviesPage?.title} />
                 {reviews()}
+                <ReviewForm idProp={id} reloadReviews={fetchMoviePage} />
                 <Link to="/"> Back to home </Link>
             </div>
         </>
