@@ -1,5 +1,5 @@
 /* CSS RESET */
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,4 +11,35 @@ ul {
 
 a {
     text-decoration: none;
+} */
+
+body,
+html,
+#root {
+    height: 100%;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+a {
+    color: #bb86fc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3700b3;
+    text-decoration: underline;
+}
+
+.movie-card-img {
+    height: 300px;
+    width: 100%;
+    object-fit: contain;
 }

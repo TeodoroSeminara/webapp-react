@@ -33,9 +33,13 @@ const HomePage = () => {
 
     return (
         <>
-            <h2>HomePage</h2>
-            <div>
-                {renderMovie()}
+            <h2 className="mb-4 text-light">HomePage</h2>
+            <div className="row g-4">
+                {movies.map(movie => (
+                    <div key={movie.id} className="col-sm-6 col-md-4 col-lg-3">
+                        <MovieCard movieProp={movie} />
+                    </div>
+                ))}
             </div>
         </>
     )

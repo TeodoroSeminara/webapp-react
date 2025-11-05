@@ -10,8 +10,10 @@ export default function DefaultLayout() {
             <header>
                 <Navbar />
             </header>
-            <main>
-                <Outlet />
+            <main className="bg-dark text-light min-vh-100 py-4">
+                <div className="container">
+                    <Outlet />
+                </div>
             </main>
         </>
     )

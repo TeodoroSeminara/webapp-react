@@ -42,23 +42,23 @@ const ReviewForm = ({ idProp, reloadReviews }) => {
             })
     }
     return (
-        <div className="card">
+        <div className="card bg-secondary text-light mt-4">
             <header className="card-header">
                 <h5>Add your review</h5>
             </header>
             <div className="card-body">
                 <form onSubmit={handleSubmit}>
-                    <div className="form-group">
-                        <label>Name</label>
-                        <input type="text" name="name" className="form-control" value={formData.name} onChange={setFieldValue} />
+                    <div className="mb-3">
+                        <label htmlFor="nameInput" className="form-label">Name</label>
+                        <input id="nameInput" type="text" name="name" className="form-control" value={formData.name} onChange={setFieldValue} />
                     </div>
-                    <div className="form-group">
-                        <label>Review</label>
-                        <textarea className="form-control" name="text" value={formData.text} onChange={setFieldValue}></textarea>
+                    <div className="mb-3">
+                        <label htmlFor="textInput" className="form-label">Review</label>
+                        <textarea id="textInput" className="form-control" name="text" value={formData.text} onChange={setFieldValue}></textarea>
                     </div>
-                    <div className="form-group">
-                        <label>Voto</label>
-                        <input name="vote" type="number" min="1" max="5" className="form-control" value={formData.vote} onChange={setFieldValue} />
+                    <div className="mb-3">
+                        <label htmlFor="voteInput" className="form-label">Voto</label>
+                        <input id="voteInput" name="vote" type="number" min="1" max="5" className="form-control" value={formData.vote} onChange={setFieldValue} />
                     </div>
                     <div className="d-flex justify-content-end pt-3">
                         <button type="submit" className="btn btn-primary">Send</button>
