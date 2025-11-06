@@ -2,19 +2,24 @@ import { useEffect, useState } from "react"
 import axios from "axios";
 
 import MovieCard from "../components/Props/MovieCard"
+import { useGlobal } from "../contexts/GlobalContext";
 
 const HomePage = () => {
 
     // Variabili di stato per Movie
     const [movies, setMovies] = useState([]);
 
+    const { setIsLoading } = useGlobal();
+
     // Chiamata axios
     const fetchMovie = () => {
+        setIsLoading(true);
         axios.get("http://localhost:3000/api/movies")
             .then(response => { setMovies(response.data) })
             .catch(error => {
                 console.log(error);
             })
+            .finally(() => { setIsLoading(false) })
     };
 
     // prima chiamata e montaggio 
@@ -38,6 +43,7 @@ const HomePage = () => {
                 {movies.map(movie => (
                     <div key={movie.id} className="col-sm-6 col-md-4 col-lg-3">
                         <MovieCard movieProp={movie} />
+
                     </div>
                 ))}
             </div>

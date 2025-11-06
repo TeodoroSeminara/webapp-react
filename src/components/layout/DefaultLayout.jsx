@@ -2,9 +2,12 @@
 import { Outlet } from "react-router";
 // Import Navbar
 import Navbar from "../Header/Navbar";
-
+import Loader from "../Loader";
+import { useGlobal } from "../../contexts/GlobalContext";
 
 export default function DefaultLayout() {
+
+    const { isLoading } = useGlobal();
     return (
         <>
             <header>
@@ -15,6 +18,7 @@ export default function DefaultLayout() {
                     <Outlet />
                 </div>
             </main>
+            {isLoading && <Loader />}
         </>
     )
 
